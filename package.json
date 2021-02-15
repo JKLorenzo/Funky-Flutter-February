@@ -1,0 +1,25 @@
+{
+  "name": "dsc---funky-flutter-february",
+  "version": "1.0.0",
+  "description": "A Discord Bot for the Flutter Codelabs event (Funky Flutter February).",
+  "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JKLorenzo/DSC---Funky-Flutter-February.git"
+  },
+  "author": "Juruel Keanu Lorenzo",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/JKLorenzo/DSC---Funky-Flutter-February/issues"
+  },
+  "homepage": "https://github.com/JKLorenzo/DSC---Funky-Flutter-February#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "discord.js-commando": "^0.12.2",
+    "firebase-admin": "^9.5.0",
+    "googleapis": "^67.0.0"
+  }
+}
