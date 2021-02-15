@@ -87,7 +87,7 @@ async function run(index) {
                     embed.setDescription(`Congratulations to **${this_finisher.fullname}** ${this_finisher.address ? `of ${this_finisher.address}`: ''}!`)
                     embed.setImage('https://cdn.discordapp.com/attachments/460064472711692301/810867508256833546/fff_logo_horizontal.PNG');
                     embed.setFooter(`Finisher ID: ${reference.id} --- ${finished_date.toUTCString().replace('GMT', 'PST')}`);
-                    embed.setColor('#23272a');
+                    embed.setColor('#2c2f33');
 
                     await message_manager.sendToChannel(constants.channels.finishers, embed);
                     count++;
