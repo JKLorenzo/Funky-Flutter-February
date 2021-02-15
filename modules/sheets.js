@@ -1,10 +1,11 @@
 const { google } = require('googleapis');
 const classes = require('./classes.js');
+const sheet_credentials = JSON.parse(process.env.SHEET_CREDENTIALS.replace(/'/g, '"').replace(/\n/g, '\\n'));
 
 const googleClient = new google.auth.JWT(
-    process.env.CLIENT_EMAIL, 
+    sheet_credentials.client_email, 
     null, 
-    process.env.PRIVATE_KEY, 
+    sheet_credentials.private_key, 
     'https://www.googleapis.com/auth/spreadsheets.readonly'
 );
 
@@ -16,7 +17,6 @@ module.exports.initialize = (spreadsheetId) => {
     return new Promise((resolve, reject) => {
         googleClient.authorize((error) => {
             if (error) {
-                console.log('A')
                 reject(error);
             } else {
                 resolve(new classes.SheetInstant(spreadsheetId, google.sheets({ version: 'v4', auth: googleClient })));
