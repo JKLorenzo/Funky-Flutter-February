@@ -84,7 +84,7 @@ async function run(index) {
                     embed.setAuthor(`Developer Student Clubs`, 'https://dscgt.club/images/dsc-logo-2.png');
                     embed.setThumbnail('https://flutter.dev/images/flutter-mono-81x100.png');
                     embed.setTitle(`Funky Flutter February 2021`);
-                    embed.setDescription(`Congratulations to **${this_finisher.fullname}** ${this_finisher.address ? `of ${this_finisher.address}`: ''}!`)
+                    embed.setDescription(`Congratulations to **${this_finisher.fullname}** ${this_finisher.address ? `of ${this_finisher.address}`: ''} for completing the Flutter Code Labs!`)
                     embed.setImage('https://cdn.discordapp.com/attachments/460064472711692301/810867508256833546/fff_logo_horizontal.PNG');
                     embed.setFooter(`Finisher ID: ${reference.id} --- ${finished_date.toUTCString()}`);
                     embed.setColor('#2c2f33');
