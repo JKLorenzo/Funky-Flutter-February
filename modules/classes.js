@@ -40,7 +40,13 @@ module.exports.Finisher = class {
     constructor(data) {
         this.timestamp = data[0];
         this.email = data[1];
-        this.fullname = data[2];
+        let name = data[2];
+        // Format name to FN LN
+        let splitname = name.split(',');
+        if (splitname.length > 0){
+            name = `${splitname[1].trim()} ${splitname[0].trim()}`
+        }
+        this.fullname = name.split(' ').map(word => `${word.charAt(0).toUpperCase()}${word.substring(1).toLowerCase()}`).join(' ');
         this.address = data[3];
         this.badges = data[4];
     }
