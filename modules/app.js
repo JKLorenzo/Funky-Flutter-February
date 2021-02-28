@@ -107,12 +107,10 @@ async function run(index) {
 
 /** @param {Number} index */
 module.exports.start = (index) => {
-    if (!running && count == -1) {
-        run(index + 1); // offset for the sheet header row
-        return true;
-    } else {
-        return false;
-    }
+    if (running) return false;
+    // +1 offset for the sheet header row
+    run(index + 1); 
+    return true;
 }
 
 module.exports.stop = () => {
