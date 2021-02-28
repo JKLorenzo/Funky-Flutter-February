@@ -98,7 +98,7 @@ async function run(index) {
         }
         processManager.finish();
     }
-    client.user.setActivity(`STOPPED`, {
+    client.user.setActivity(`Stopped`, {
         type: 'PLAYING'
     });
     running = false;
@@ -113,4 +113,10 @@ module.exports.start = (index) => {
     } else {
         return false;
     }
+}
+
+module.exports.stop = () => {
+    if (!running) return false;
+    running = false;
+    return true;
 }
