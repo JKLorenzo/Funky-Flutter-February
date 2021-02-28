@@ -16,7 +16,7 @@ module.exports = class Stop extends Commando.Command {
         /** @type {import('../../modules/app.js')} */
         const app = this.client.modules.app;
         if (app.stop()){
-            message.reply(`Stopping.`);
+            message.reply(`Stopping. ETA: maximum of 1 minute.`);
         } else {
             message.reply(`The bot is already stopped.`);
         }

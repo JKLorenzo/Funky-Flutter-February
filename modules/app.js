@@ -55,14 +55,15 @@ module.exports.channel = (GuildChannelResolvable) => {
     return this.guild().channels.resolve(GuildChannelResolvable) || this.guild().channels.resolve(functions.parseMention(GuildChannelResolvable));
 }
 
-let count = -1;
+let status;
+let count;
 let running = false;
-let status = '';
 
 /** @param {Number} index */
 async function run(index) {
     running = true;
     count = index;
+    status = '';
 
     while (running) {
         await processManager.queue();
